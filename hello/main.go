@@ -11,6 +11,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	log.Println("access to http://localhost:8888")
 	http.HandleFunc("/", handler)
 	log.Fatal(http.ListenAndServe(":8888", nil))
 }
